@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+{% block title %}Управление группой{% endblock %}
+
+
+{% block content %}
+
+<h1 class="text-center fs-1">Управление группой {{ group.name}}</h1>
+<div class="container mt-4">
+    <div class="row">
+        {% for student in group.students.all %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ student.first_name }} {{ student.last_name }}</h5>
+                    <p class="card-text">
+                        <strong>Average Mark:</strong> {{ student.avg_mark }}<br>
+                        <strong>Birth Date:</strong> {{ student.birth_date|date:"d.m.Y" }}<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock%}

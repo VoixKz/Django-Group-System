@@ -1,0 +1,85 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.DS_Store
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# MySQL
+*.sql
+
+# PostgreSQL
+*.pgsql
+
+# SQLite
+*.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Other
+*.log
+*.pot
+*.mo
+*.pid
+*.seed
+*.pid.lock

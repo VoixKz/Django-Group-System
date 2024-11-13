@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+{% block title %}Создание группы{% endblock %}
+
+
+{% block extra_css %}
+<style>
+    label {
+        margin-bottom: 10px;
+    }
+    .formDescription {
+        min-height: 150px;
+        height: 150px;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="text-center fs-1">Создать группу</h1>
+<form method="post" class="form-horizontal">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-primary fs-5">Создать</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

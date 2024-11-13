@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+{% block title %}Добавление студента{% endblock %}
+
+
+{% block extra_css %}
+<style>
+    label {
+        margin-bottom: 3px;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="text-center fs-1">Добавить студента</h1>
+<form method="post" class="form-horizontal">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-primary fs-5">Добавить</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
